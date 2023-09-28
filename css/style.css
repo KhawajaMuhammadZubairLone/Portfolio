@@ -5,9 +5,39 @@
   font-family: "Mooli", sans-serif;
   box-sizing: border-box;
 }
+
+                                      /* Page transition area start here */
+ /* .spin:hover{
+  transform: rotate(360deg) ;
+  transition: all 3s;
+} */
+/* .spin2 {
+  width: 80%;
+}
+.spin2 > * {
+  display:inline;
+  position: relative;
+  animation: 3s linear move;
+}
+@keyframes move {
+  0%,
+  100% {
+    transform: translateX(-110%);
+    left: 0%;
+  }
+  0%,
+  100% {
+    transform: translateX(110%);
+    right: 100%;
+  }
+} */ 
+                                        /* Page transition area ends here */
+
+
 body {
   background: #1e272e !important;
 }
+ /* button custom css */
 .btn {
   border-color: #0097e6 !important;
   --bs-btn-color: #0097e6 !important;
@@ -25,6 +55,7 @@ body {
   --bs-btn-disabled-border-color: #0097e6 !important;
   --bs-gradient: none !important;
 }
+ /* nav */
 .nav-link:hover {
   color: #0097e6 !important;
 }
@@ -32,10 +63,12 @@ body {
   position: sticky;
   top: 0px;
 }
+/* img */
 .container .col img {
   margin-top: 5%;
   margin-bottom: 5%;
 }
+/* text-style */
 .col h5,
 h1,
 p {
@@ -48,6 +81,7 @@ p {
 span {
   color: #0097e6;
 }
+/* about-css */
 .about-color {
   background-color: #1e272e;
 }
@@ -60,9 +94,11 @@ h2,
 h3 {
   font-weight: bolder !important;
 }
+/* skill-css */
 .skill-color {
   background-color: #1e272e !important;
 }
+/* projects-css */
 .video-edit {
   height: 30vh !important;
 }
