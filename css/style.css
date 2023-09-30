@@ -6,38 +6,68 @@
   box-sizing: border-box;
 }
 
-                                      /* Page transition area start here */
- /* .spin:hover{
-  transform: rotate(360deg) ;
-  transition: all 3s;
-} */
-/* .spin2 {
-  width: 80%;
+/* Page transition area start here */
+.nav-animated {
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
 }
-.spin2 > * {
-  display:inline;
-  position: relative;
-  animation: 3s linear move;
+.menu-animated {
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1s;
 }
-@keyframes move {
-  0%,
-  100% {
-    transform: translateX(-110%);
-    left: 0%;
-  }
-  0%,
-  100% {
-    transform: translateX(110%);
-    right: 100%;
-  }
-} */ 
-                                        /* Page transition area ends here */
-
+.icon-animated a {
+  opacity: 0;
+  transition: 0.5s ease;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+.text-animated h5,
+p {
+  opacity: 0;
+  animation: slideBottom 1s ease forwards;
+}
+.text-animated h1 {
+  opacity: 0;
+  animation: slideRight 3s ease forwards;
+}
+.btn-animated {
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+}
+.img-animated {
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1.5s;
+}
+.about-animated {
+  opacity: 0;
+  animation: slideLeft 2s ease forwards;
+  animation-delay: 2s;
+}
+.service-animated {
+  opacity: 0;
+  animation: slideBottom 3s ease forwards;
+}
+.skill-animated {
+  opacity: 0;
+  animation: slideRight 3s ease forwards;
+}
+.project-animated {
+  opacity: 0;
+  animation: slideTop 3s ease forwards;
+}
+.contact-animated {
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1.5s;
+}
+/* Page transition area ends here */
 
 body {
   background: #1e272e !important;
 }
- /* button custom css */
+/* button custom css */
 .btn {
   border-color: #0097e6 !important;
   --bs-btn-color: #0097e6 !important;
@@ -55,13 +85,9 @@ body {
   --bs-btn-disabled-border-color: #0097e6 !important;
   --bs-gradient: none !important;
 }
- /* nav */
+/* nav */
 .nav-link:hover {
   color: #0097e6 !important;
-}
-.navbar{
-  position: sticky;
-  top: 0px;
 }
 /* img */
 .container .col img {
@@ -103,3 +129,47 @@ h3 {
   height: 30vh !important;
 }
 
+/* navbar animation keyframe */
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+/* menu animation keyframe */
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+/* text anmation keyframe */
+@keyframes slideBottom {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+/* text anmation keyframe */
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
